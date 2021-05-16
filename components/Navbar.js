@@ -24,9 +24,12 @@ export default function Navbar() {
             </Link>
           </li>
           {user ? (
-            <li onClick={logout} className="btn">
-              Logout
-            </li>
+            <>
+              <li>{user.email}</li>
+              <li onClick={logout} className="btn">
+                Logout
+              </li>
+            </>
           ) : (
             <li onClick={login} className="btn">
               Login/Signup
